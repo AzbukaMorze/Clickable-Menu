@@ -1,0 +1,148 @@
+.content {
+  min-width: 320px;
+  height: 100vh;
+  background-image: url("../img/study.jpeg");
+  background-size: cover;
+  border: 2px solid RGB(196, 152, 214);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.student-btn {
+  padding: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+  color: RGB(86, 86, 86);
+}
+
+.teacher-btn {
+  padding: 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: pink;
+  color: RGB(86, 86, 86);
+}
+
+.student-btn:hover {
+  background-color: RGB(196, 152, 214);
+  color: pink;
+}
+
+.teacher-btn:hover {
+  background-color: RGB(196, 152, 214);
+  color: pink;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-content: center;
+  overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s, visibility 0.4s;
+}
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: pink;
+}
+
+.par {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  font-family: sans-serif;
+  padding: 15px;
+}
+
+.ok-button {
+  margin: 10px 55px;
+  border-radius: 10px;
+  border: none;
+  background-color: RGB(196, 152, 214);
+  color: white;
+}
+
+.ok-button:hover {
+  background-color: white;
+  color: RGB(196, 152, 214);
+}
+
+.close-button {
+  align-self: flex-end;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background-color: pink;
+  background-image: url();
+  display: flex;
+  justify-content: center;
+}
+
+.x {
+  position: absolute;
+  transform: translateY(0);
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.x:hover {
+  color: RGB(196, 152, 214);
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 3400px) {
+  button .teacher-btn .student-btn {
+    padding: calc(15px + 25 * (100vw - 320px) / 2080);
+  }
+  button p {
+    /* width: calc(75px + (300 - 75) * ((100vw - 320px) / (1200 - 320)));; */
+    font-size: calc(14px + 14 * (100vw - 320px) / 2080);
+  }
+  .modal__content {
+    width: calc(140px + 140 * (100vw - 320px) / 2080);
+    height: calc(140px + 60 * (100vw - 320px) / 2080);
+  }
+  .close-button {
+    width: calc(18px + 18 * (100vw - 320px) / 2080);
+    height: calc(18px + 18 * (100vw - 320px) / 2080);
+    margin: 0 calc(5px + 5 * (100vw - 320px) / 2080) calc(3px + 7 * (100vw - 320px) / 2080) calc(80px + 70 * (100vw - 320px) / 2080);
+  }
+  .close-button__line1 {
+    width: calc(12px + 12 * (100vw - 320px) / 2080);
+    height: calc(2px + 2 * (100vw - 320px) / 2080);
+  }
+  .close-button__line2 {
+    width: calc(12px + 12 * (100vw - 320px) / 2080);
+    height: calc(2px + 2 * (100vw - 320px) / 2080);
+  }
+  .par {
+    font-size: calc(14px + 14 * (100vw - 320px) / 2080);
+  }
+  .ok-button {
+    font-size: calc(14px + 14 * (100vw - 320px) / 2080);
+    padding: calc(3px + 17 * (100vw - 320px) / 2080);
+  }
+}

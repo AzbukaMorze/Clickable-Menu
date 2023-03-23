@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html class="html" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/Style.css">
+</head>
+
+<body class="body">
+    <div class="content">
+        <button class="student-btn" id="open-modal1" onclick="toggleModal()">
+            <p>Студент</p>
+        </button>
+        <button class="teacher-btn" id="open-modal2" onclick="toggleModal()">
+            <p>Преподаватель</p>
+        </button>
+    </div>
+    <div class="modal" id="my-modal">
+        <div class="modal__content">
+            <button class="close-button" id="close-modal1" onclick="toggleModal()">
+                <span class="x">&times;</span>
+            </button>
+            <div class="par item">Вход выполнен!</div>
+            <button class="ok-button" id="close-modal2" onclick="toggleModal()">
+                Ok
+            </button>
+        </div>
+    </div>
+    <script defer src="scripts/animation.js"></script>
+</body>
+
+</html>
